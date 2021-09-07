@@ -11,3 +11,13 @@ function range(grades) {
     }
     return (highest - lowest)
 }
+
+function median (grades) {
+    let grades1 = [...grades]
+    grades1.sort(function(a, b){return a - b})
+    if (grades1.length%2==1)
+        return grades1 [grades1.length/2 + 1]
+    else {
+        return (grades1 [grades1.length/2] + grades1 [grades1.length/2 - 1])/2.0
+    }
+}
