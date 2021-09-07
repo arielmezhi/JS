@@ -21,3 +21,14 @@ function median (grades) {
         return (grades1 [grades1.length/2] + grades1 [grades1.length/2 - 1])/2.0
     }
 }
+
+function  halfRange(grades) {
+    let halfwayThrough = Math.floor(grades.length / 2)
+    let arraySecondHalf = grades.slice(halfwayThrough, grades.length)
+    return range(arraySecondHalf)
+}
+
+console.log("stats:")
+console.log("Range:" + range(grades))
+console.log("Media: " + median(grades))
+console.log("Half Range:" + halfRange(grades))
